@@ -25,12 +25,12 @@ router.post("/api/burgers", function (req, res){
 });
 
 router.put("/api/burgers/:id", function(req, res){
-    var idHold = "id = " + req.params.id;
-    console.log("ID Hold", idHold);
+    var conditions = "id = " + req.params.id;
+    console.log("conditions - ", conditions);
 
     burger.updateOne({
         devoured: req.body.devoured
-    }, idHold, function (data){
+    }, conditions, function (data){
         if (data.changedRows == 0){
             return res.status(404).end();
         } else {
