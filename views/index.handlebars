@@ -1,32 +1,34 @@
-<h1>Welcome to the Burger Madness!</h1>
+<h1 class="title">Welcome to the Burger Madness!</h1>
+<div class="display-closed">
+<h2 class="not_eaten">These one's have already been devoured...but they can be reclaimed!</h2>
 
-<h2>These one's have already been devoured...but they can be reclaimed!</h2>
-
-<ul class="not_eaten">
+<ol class="not_eaten">
   {{#each burgers}}
     {{#unless devoured}}
       {{> burgers/burger-block devoured=true}}
     {{/unless}}
   {{/each}}
-</ul>
+</ol>
+</div>
+<div class="display-open">
+<h2 class="eaten">These one's are available for consumption...hurry and choose before they are all gone!</h2>
 
-<h2>These one's are available for consumption...hurry and choose before they are all gone!</h2>
-
-<ul class="eaten">
+<ol class="eaten">
   {{#each burgers}}
     {{#if devoured}}
       {{> burgers/burger-block devoured=false}}
     {{/if}}
   {{/each}}
-</ul>
-
-<h2>Add a Burger to the Madness</h2>
+</ol>
+</div>
+<div class="display-add">
+<h2>Add a Burger to the Madness!</h2>
 <form class="create-form">
 
   <div class="form-group">
-    <label for="burgs">Burger Name:</label>
+    <label id="labeladd" for="burgs">Burger Name:</label>
     <input type="text" id="burgs" name="name">
+  <button class="add-burger" type="submit">Add Burger</button>
   </div>
-
-  <button type="submit">Add Burger</button>
 </form>
+</div>

@@ -1,0 +1,61 @@
+body {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 5%;
+    background-image: url("https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1554735320/shape/mentalfloss/51885-istock-832279284.jpg");
+    background-size: 110%;
+    background-attachment: fixed;
+    opacity: .90;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: 2rem;
+}
+
+.display-closed {
+    width: 45%;
+    float: left;
+    background: gold;
+    border-radius: 18px;
+    margin-bottom: 5rem;
+}
+
+.display-open {
+    width: 45%;
+    float: right;
+    margin-bottom: 5rem;
+    background: gold;
+    border-radius: 18px;
+}
+
+.display-add {
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+    background: black;
+    color: white;
+    border-radius: 18px;
+    border-style: solid;
+}
+
+li {
+    padding: 1rem;
+}
+
+.add-burger {
+    margin-left: 2rem;
+}
+
+.title {
+    background: black;
+    color: white;
+    border-radius: 18px;
+    border-style: solid;
+    margin-bottom: 5rem;
+}
+
+#labeladd {
+    padding: 1rem;
+}
