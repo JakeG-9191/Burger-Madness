@@ -13,12 +13,13 @@ if (process.env.JAWSDB_URL) {
 });
 };
 // Logs connection
-connection.connect(function(err){
-    if (err) {
-        console.log("error: " + err.stack);
-        return;
-    }
-    console.log("connected as id " + connection.threadId)
-});
+// connection.connect(function(err){
+//     if (err) {
+//         console.log("error: " + err.stack);
+//         return;
+//     }
+//     console.log("connected as id " + connection.threadId)
+// });
+connection.connect();
 // exports connection module, used by orm.js
 module.exports = connection;
