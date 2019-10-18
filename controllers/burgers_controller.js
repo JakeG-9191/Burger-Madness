@@ -1,9 +1,10 @@
+// require express for application
 var express = require("express");
-
+// create router functionality
 var router = express.Router();
-
+// require pre-built models
 var burger = require("../models/burger.js");
-
+// provide all burger information within database to user if / route hit
 router.get("/", function (req, res){
     burger.selectAll(function(data){
         var moreBurger = {
@@ -13,7 +14,7 @@ router.get("/", function (req, res){
         res.render("index", moreBurger)
     });
 });
-
+// posts new burger based on user input
 router.post("/api/burgers", function (req, res){
     burger.insertOne([
         "burger_name", "devoured"
@@ -23,7 +24,7 @@ router.post("/api/burgers", function (req, res){
         res.json({ id: data.insertId })
     });
 });
-
+// updates burger for devoured or not devoured for html placement
 router.put("/api/burgers/:id", function(req, res){
     var conditions = "id = " + req.params.id;
     console.log("conditions - ", conditions);
@@ -38,5 +39,5 @@ router.put("/api/burgers/:id", function(req, res){
         }
     });
 });
-
+// exports router module 
 module.exports = router;

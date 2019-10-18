@@ -1,5 +1,6 @@
+// Require connection from connection.js
 var connection = require("../config/connection.js");
-
+// add ? for SQL functionality
 function printQuestionMarks(num) {
     var arr = [];
 
@@ -9,7 +10,7 @@ function printQuestionMarks(num) {
 
     return arr.toString();
 }
-
+// creates more friendly string format for SQL
 function objToSql(ob){
     var arr = [];
 
@@ -26,6 +27,7 @@ function objToSql(ob){
 }
 
 var orm = {
+    // select all data from the burger table to proivde to user
     selectAll: function(table, cb) {
         var queryString = "SELECT * FROM " + table + ";";
         connection.query(queryString, function (err, data){
@@ -33,6 +35,7 @@ var orm = {
             cb(data)
         })
     },
+    // insert one burger based on user input
     insertOne: function(table, col, vals, cb) {
         var queryString = "INSERT INTO " + table;
         queryString += " (";
@@ -49,6 +52,7 @@ var orm = {
             cb(data)
         })
     },
+    // update burger based on condition of being devoured or not
     updateOne: function (table, items, conditions, cb) {
         var queryString = "UPDATE " + table;
         queryString += " SET ";
@@ -63,5 +67,5 @@ var orm = {
         })
     }
 };
-
+// export orm module
 module.exports = orm;

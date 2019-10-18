@@ -1,5 +1,6 @@
+// import orm module
 var orm = require("../config/orm.js");
-
+// use orm to call pre built CRU functions
 var burger = {
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res){
@@ -17,5 +18,5 @@ var burger = {
         });
     }
 };
-
+// export burger module
 module.exports = burger;
