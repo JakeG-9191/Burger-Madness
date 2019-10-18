@@ -1,5 +1,5 @@
 # Burger-Madness
-Burger Madness is an application that allow the user view a list of burgers that have been devoured or are available for consumption by the user. 
+Burger Madness is an application that allow the user view a list of burgers that have been devoured or are available for consumption by the user. Check out the live version of the application by clicking on the following link https://agile-hollows-27413.herokuapp.com/
 
 ## Application Information
 Burgers that have been eaten can be reclaimed by clicking on the appropriate button, while those that are available to eat can be eaten by also clicking on the appropriate button. 
